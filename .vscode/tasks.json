@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "build hello world",
+            "type": "shell",
+            "windows": {
+                "command": "g++",
+                "args": [
+                    "-g", "main.cpp"
+                ]  
+            },
+            "osx": {
+                "command": "clang",
+                "args": [
+                    "-o","reverse","reverse.c","file_utils.c"
+                ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "taskName": "zip project",
+            "type": "shell",
+            "osx": {
+                "command": "zip",
+                "args":[
+                    "-r","../Phillip_Garza_Project_1_C_343.zip","../Project1/"
+                ]
+            }
+
+        } 
+    ]
+}
