@@ -5,6 +5,14 @@
 #include <sys/stat.h>
 
 
+/******************************************************
+ * Read Fil
+ * @param - Filename - name of file 
+ * @param - buffer -- point to a pointer for an array
+ * takes a filenmae opens it and reads it into a buffer
+ * 
+ * ***************************************************/
+
 int read_file( char* filename, char **buffer ){
     //Create pointer to filename
    FILE *inputFile;
@@ -39,6 +47,13 @@ int read_file( char* filename, char **buffer ){
    //returns size of array
    return i;
 }
+
+/*******************************************************
+ * Write to file
+ * @Param: Filename - File Name
+ * @Param: buffer - Pointer to a array lsit
+ * @Param: size - size of the file
+ * *****************************************************/
 int write_file( char* filename, char *buffer, int size){
    
    FILE *outputFile;
